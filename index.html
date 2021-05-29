@@ -3,56 +3,59 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta charset="UTF-8">
-    <title>Random Thing</title>
+    <meta charset="UTF-8">
+    <title>Random Japanease Character by svvv</title>
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-	<div id="level-container">
-		<select id="cboLevel" onchange="setLevel()">
-		  <option value="1">Level 1</option>
-		  <option value="2">Level 2</option>
-		  <option value="3">Level 3</option>
-		  <option value="4">Level 4</option>
-		  <option value="5">Level 5</option>
-		  <option value="6">Level 6</option>
-		  <option value="7">Level 7</option>
-		  <option value="8">Level 8</option>
-		  <option value="9">Level 9</option>
-		  <option value="10">Level 10</option>
-		  <option value="-1" selected="selected">Level Max</option>
-		</select>
-	</div>
-	
-    <div>
+    <div id="control-container"> 
 
-        <div class="radio-container">
-            <input type="radio" id="hiragana" name="dipplay_type" value="hiragana" onclick="changeType(1)" checked>
-            <label for="hiragana">Hiragana</label>
+        <div>
+            <div class="radio-container">
+                <input type="radio" id="hiragana" name="dipplay_type" value="hiragana" onclick="changeType(1)" checked>
+                <label for="hiragana">Hiragana</label>
+            </div>
+
+            <div class="radio-container">
+                <input type="radio" id="katagana" name="dipplay_type" value="katagana" onclick="changeType(2)">
+                <label for="katagana">Katagana</label>
+            </div>
+
+            <div class="radio-container">
+                <input type="radio" id="eng" name="dipplay_type" value="x" onclick="changeType(0)">
+                <label for="eng">English</label>
+            </div>
+
         </div>
 
-        <div class="radio-container">
-            <input type="radio" id="katagana" name="dipplay_type" value="katagana" onclick="changeType(2)">
-            <label for="katagana">Katagana</label>
-        </div>
-
-        <div class="radio-container">
-            <input type="radio" id="eng" name="dipplay_type" value="x" onclick="changeType(0)">
-            <label for="eng">English</label>
+        <div class="button-container">
+            <input type="button" id="btnNext" value="Next" onclick="random()">
         </div>
 
     </div>
 
-    <div class="button-container">
-        <input type="button" id="btnNext" value="Next" onclick="random()">
+    <div id="level-container">
+        <select id="cboLevel" onchange="setLevel()">
+            <option value="1">Level 1</option>
+            <option value="2">Level 2</option>
+            <option value="3">Level 3</option>
+            <option value="4">Level 4</option>
+            <option value="5">Level 5</option>
+            <option value="6">Level 6</option>
+            <option value="7">Level 7</option>
+            <option value="8">Level 8</option>
+            <option value="9">Level 9</option>
+            <option value="10">Level 10</option>
+            <option value="-1" selected="selected">Level Max</option>
+        </select>
     </div>
 
     <div id="display">あ</div>
 
-    
+
 
 </body>
 
