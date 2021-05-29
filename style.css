@@ -8,28 +8,14 @@ body
     display: inline-block;
 }
 
-.button-container,
-#btnNext
-{
-    margin-top: 10px;
-}
 
 #display
 {
     font-size: 25vh;
 }
 
-.next-button
-{
-	width: 100px;
-}
-
 #btnNext
 {
+	margin-top: 10px;
 	padding: 5px 10px;	
-}
-
-#sub-button
-{
-	display: none;
 }
