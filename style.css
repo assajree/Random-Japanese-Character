@@ -1,33 +1,3 @@
-body {
-    background-color: #000;
-    color: #aaa;
-    text-align: center;
-    font-family: 'Courier New', monospace;
-}
-
-.radio-container {
-    display: inline-block;
-}
-
-#control-container {
-    position: absolute;
-    bottom: 6vh;
-    width: 97%;
-    margin-left: 0.75%;
-}
-
-#display {
-    font-size: 25vh;
-    height: 36vh;
-    line-height: 36vh;
-    margin-top: 13vh;
-}
-
-#btnNext {
-    margin-top: 14px;
-    padding: 5px 10px;
-}
-
 @media only screen and (max-width: 479px) {
     #radio-container,
     .radio-container {
@@ -46,3 +16,69 @@ body {
         vertical-align: middle;
     }
 }
+
+body {
+    background-color: #000;
+    color: #aaa;
+    text-align: center;
+    font-family: 'Courier New', monospace;
+}
+
+.radio-container {
+    display: inline-block;
+}
+
+#control-container {
+    position: absolute;
+    bottom: 6vh;
+    width: 97%;
+    margin-left: 0.5%;
+}
+
+#display {
+    font-size: 25vh;
+    height: 36vh;
+    line-height: 36vh;
+    margin-top: 13vh;
+}
+
+#btnNext {
+    margin-top: 14px;
+    padding: 10px 30px;
+    border-radius: 28px;
+    background-color: #333;
+    color: #aaa;
+    border: none 0px;
+}
+
+#btnNext:hover {
+    background-color: #0075FF;
+    color: #ccc;
+}
+
+select
+{
+    background-color: #333;
+    color: #aaa;
+    padding: 7px 3px;
+    border-radius: 2px;
+}
+
+.glow {
+    font-size: 80px;
+    color: #fff;
+    text-align: center;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+  }
+  
+  @-webkit-keyframes glow {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #004a9e, 0 0 40px #004a9e, 0 0 50px #004a9e, 0 0 60px #004a9e, 0 0 70px #004a9e;
+    }
+    to {
+      text-shadow: 0 0 20px #fff, 0 0 30px #325fa1, 0 0 40px #325fa1, 0 0 50px #325fa1, 0 0 60px #325fa1, 0 0 70px #325fa1, 0 0 80px #325fa1;
+    }
+  }
+

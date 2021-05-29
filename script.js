@@ -28,7 +28,7 @@ var items_sa = [
     ["so", "そ", "ソ"],
 
     ["za", "ざ", "ザ"],
-    ["zi/ji", "じ", "ジ"],
+    ["zi\n(ji)", "じ", "ジ"],
     ["zu", "ず", "ズ"],
     ["ze", "ぜ", "ゼ"],
     ["zo", "ぞ", "ゾ"],
@@ -42,8 +42,8 @@ var items_ta = [
     ["to", "と", "ト"],
 
     ["da", "だ", "ダ"],
-    ["di/ji", "ぢ", "ヂ"],
-    ["du/zu", "づ", "ヅ"],
+    ["di\n(ji)", "ぢ", "ヂ"],
+    ["du\n(zu)", "づ", "ヅ"],
     ["de", "で", "デ"],
     ["do", "ど", "ド"],
 ];
@@ -54,6 +54,13 @@ var items_na = [
     ["nu", "ぬ", "ヌ"],
     ["ne", "ね", "ネ"],
     ["no", "の", "ノ"],
+];
+var items_ha = [
+    ["ha", "は", "ハ"],
+    ["hi", "ひ", "ヒ"],
+    ["fu\n(hu)", "ふ", "フ"],
+    ["he", "へ", "ヘ"],
+    ["ho", "ほ", "ホ"],
 
     ["ba", "ば", "バ"],
     ["bi", "び", "ビ"],
@@ -67,19 +74,14 @@ var items_na = [
     ["pe", "ぺ", "ペ"],
     ["po", "ぽ", "ポ"]
 ];
-var items_ha = [
-    ["ha", "は", "ハ"],
-    ["hi", "ひ", "ヒ"],
-    ["fu/hu", "ふ", "フ"],
-    ["he", "へ", "ヘ"],
-    ["ho", "ほ", "ホ"],
-];
 var items_ma = [
     ["ma", "ま", "マ"],
     ["mi", "み", "ミ"],
     ["mu", "む", "ム"],
     ["me", "め", "メ"],
     ["mo", "も", "モ"],
+
+
 ];
 var items_ya = [
     ["ya", "や", "ヤ"],
@@ -106,7 +108,7 @@ var charIndex = 0;
 var oldChar = "あ";
 
 // document ready
-document.addEventListener("DOMContentLoaded", function(event) {
+document.addEventListener("DOMContentLoaded", function (event) {
 
     var level = getCookie("level");
     if (level)
@@ -141,8 +143,8 @@ function setType(index) {
         case 2:
             katagana.checked = true;
             break;
-            //default:
-            // code block
+        //default:
+        // code block
     }
 }
 
@@ -269,7 +271,7 @@ function buildItems(level) {
             break;
     }
 
-    // console.log(result);
+    // console.log("buildItems", level, result);
     return result;
 
 }
