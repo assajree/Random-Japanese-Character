@@ -1,0 +1,19 @@
+body
+{
+    text-align: center;
+}
+
+.radio-container
+{
+    display: inline-block;
+}
+
+.button-container
+{
+    margin-top: 30px;
+}
+
+#display
+{
+    font-size: 25vh;
+}

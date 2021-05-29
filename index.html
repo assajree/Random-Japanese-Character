@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Thing</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div>
+
+        <div class="radio-container">
+            <input type="radio" id="hiragana" name="dipplay_type" value="hiragana" onclick="setType(1)" checked>
+            <label for="hiragana">Hiragana</label>
+        </div>
+
+        <div class="radio-container">
+            <input type="radio" id="katagana" name="dipplay_type" value="katagana" onclick="setType(2)">
+            <label for="katagana">Katagana</label>
+        </div>
+
+        <div class="radio-container">
+            <input type="radio" id="eng" name="dipplay_type" value="x" onclick="setType(0)">
+            <label for="eng">English</label>
+        </div>
+
+    </div>
+
+    <div class="button-container">
+        <input type="button" id="btnRandom" value="Next" onclick="random()">
+    </div>
+
+    <div id="display">あ</div>
+
+    
+
+</body>
+
+</html>
