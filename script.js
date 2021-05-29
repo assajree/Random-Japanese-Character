@@ -17,74 +17,74 @@ var items = [
     ["se", "せ", "セ"],
     ["so", "そ", "ソ"],
 
-    // ["ta", "た", "タ"],
-    // ["chi", "ち", "チ"],
-    // ["tsu", "つ", "ツ"],
-    // ["te", "て", "テ"],
-    // ["to", "と", "ト"],
+    ["ta", "た", "タ"],
+    ["chi", "ち", "チ"],
+    ["tsu", "つ", "ツ"],
+    ["te", "て", "テ"],
+    ["to", "と", "ト"],
 
-    // ["na", "な", "ナ"],
-    // ["ni", "に", "ニ"],
-    // ["nu", "ぬ", "ヌ"],
-    // ["ne", "ね", "ネ"],
-    // ["no", "の", "ノ"],
+    ["na", "な", "ナ"],
+    ["ni", "に", "ニ"],
+    ["nu", "ぬ", "ヌ"],
+    ["ne", "ね", "ネ"],
+    ["no", "の", "ノ"],
 
-    // ["ha", "は", "ハ"],
-    // ["hi", "ひ", "ヒ"],
-    // ["fu/hu", "ふ", "フ"],
-    // ["he", "へ", "ヘ"],
-    // ["ho", "ほ", "ホ"],
+    ["ha", "は", "ハ"],
+    ["hi", "ひ", "ヒ"],
+    ["fu/hu", "ふ", "フ"],
+    ["he", "へ", "ヘ"],
+    ["ho", "ほ", "ホ"],
 
-    // ["ma", "ま", "マ"],
-    // ["mi", "み", "ミ"],
-    // ["mu", "む", "ム"],
-    // ["me", "め", "メ"],
-    // ["mo", "も", "モ"],
+    ["ma", "ま", "マ"],
+    ["mi", "み", "ミ"],
+    ["mu", "む", "ム"],
+    ["me", "め", "メ"],
+    ["mo", "も", "モ"],
 
-    // ["ya", "や", "ヤ"],
-    // ["yu", "ゆ", "ユ"],
-    // ["yo", "よ", "ヨ"],
+    ["ya", "や", "ヤ"],
+    ["yu", "ゆ", "ユ"],
+    ["yo", "よ", "ヨ"],
 
-    // ["ra", "ら", "ラ"],
-    // ["ri", "り", "リ"],
-    // ["ru", "る", "ル"],
-    // ["re", "れ", "レ"],
-    // ["ro", "ろ", "ロ"],
+    ["ra", "ら", "ラ"],
+    ["ri", "り", "リ"],
+    ["ru", "る", "ル"],
+    ["re", "れ", "レ"],
+    ["ro", "ろ", "ロ"],
 
-    // ["wa", "わ", "ワ"],
-    // ["wo", "を", "ヲ"],
+    ["wa", "わ", "ワ"],
+    ["wo", "を", "ヲ"],
+	["n", "ん", "ン"],
 
-    // ["ga", "が", "ガ"],
-    // ["gi", "ぎ", "ギ"],
-    // ["gu", "ぐ", "グ"],
-    // ["ge", "げ", "ゲ"],
-    // ["go", "ご", "ゲ"],
+    ["ga", "が", "ガ"],
+    ["gi", "ぎ", "ギ"],
+    ["gu", "ぐ", "グ"],
+    ["ge", "げ", "ゲ"],
+    ["go", "ご", "ゲ"],
 
-    // ["za", "ざ", "ザ"],
-    // ["zi/ji", "じ", "ジ"],
-    // ["zu", "ず", "ズ"],
-    // ["ze", "ぜ", "ゼ"],
-    // ["zo", "ぞ", "ゾ"],
+    ["za", "ざ", "ザ"],
+    ["zi/ji", "じ", "ジ"],
+    ["zu", "ず", "ズ"],
+    ["ze", "ぜ", "ゼ"],
+    ["zo", "ぞ", "ゾ"],
 
-    // ["da", "だ", "ダ"],
-    // ["di/ji", "ぢ", "ヂ"],
-    // ["du/zu", "づ", "ヅ"],
-    // ["de", "で", "デ"],
-    // ["do", "ど", "ド"],
+    ["da", "だ", "ダ"],
+    ["di/ji", "ぢ", "ヂ"],
+    ["du/zu", "づ", "ヅ"],
+    ["de", "で", "デ"],
+    ["do", "ど", "ド"],
 
-    // ["ba", "ば", "バ"],
-    // ["bi", "び", "ビ"],
-    // ["bu", "ぶ", "ブ"],
-    // ["be", "べ", "ベ"],
-    // ["bo", "ぼ", "ボ"],
+    ["ba", "ば", "バ"],
+    ["bi", "び", "ビ"],
+    ["bu", "ぶ", "ブ"],
+    ["be", "べ", "ベ"],
+    ["bo", "ぼ", "ボ"],
 
-    // ["pa", "ぱ", "パ"],
-    // ["pi", "ぴ", "ピ"],
-    // ["pu", "ぷ", "プ"],
-    // ["pe", "ぺ", "ペ"],
-    // ["po", "ぽ", "ポ"],
-
-    ["n", "ん", "ン"]
+    ["pa", "ぱ", "パ"],
+    ["pi", "ぴ", "ピ"],
+    ["pu", "ぷ", "プ"],
+    ["pe", "ぺ", "ペ"],
+    ["po", "ぽ", "ポ"]
+    
 ];
 
 var typeIndex = 1;
@@ -132,14 +132,14 @@ function refreshText()
 }
 
 function random(type) {
-	console.log("type", type);
 	if(type != undefined )
 		setType(type);
-	
-    // console.log(display.innerHTML);
-
-    // console.log("random");
-    var newCharIndex= Math.floor(Math.random() * items.length);
+		
+	var level = Number(cboLevel.value);
+	var randomLength = getRandomLength(level);
+	console.log(randomLength);
+		
+    var newCharIndex= Math.floor(Math.random() * randomLength);
     if(newCharIndex == charIndex)
     {
         random()
@@ -150,4 +150,44 @@ function random(type) {
         refreshText();
     
     }
+}
+
+function getRandomLength(level)
+{
+	console.log(level);
+	switch(level)
+	{	
+		case 1:
+			return 5;
+			break;
+		case 2:
+			return 10;
+			break;
+		case 3:
+			return 15;
+			break;
+		case 4:
+			return 20;
+			break;
+		case 5:
+			return 25;
+			break;
+		case 6:
+			return 30;
+			break;
+		case 7:
+			return 35;
+			break;
+		case 8:
+			return 38;
+			break;
+		case 9:
+			return 43;
+			break;
+		case 10:
+			return 46;
+			break;			
+		default :			
+			return items.length
+	}
 }

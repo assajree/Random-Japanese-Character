@@ -8,6 +8,13 @@ body
     display: inline-block;
 }
 
+#level-container
+{
+	position: absolute;
+    bottom: 10px;
+    width: 98%;
+}
+
 
 #display
 {
