@@ -13,6 +13,7 @@ body {
     position: absolute;
     bottom: 6vh;
     width: 97%;
+    margin-left: 0.75%;
 }
 
 #display {
