@@ -1,0 +1,1 @@
+view as https://assajree.github.io/random-japanese-character/
