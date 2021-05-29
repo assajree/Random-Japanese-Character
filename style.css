@@ -1,85 +1,141 @@
-@media only screen and (max-width: 479px) {
-    #radio-container,
-    .radio-container {
-        display: block;
-        width: 120px;
-    }
-    #radio-container {
-        margin: auto;
-    }
-    .radio-container {
-        text-align: left;
-        padding: 7px 0px;
-    }
-    .radio-container input,
-    .radio-container label {
-        vertical-align: middle;
-    }
+.random-icon {
+    margin-left: 18px;
 }
 
 body {
     background-color: #000;
-    color: #aaa;
-    text-align: center;
-    font-family: 'Courier New', monospace;
+    color           : #aaa;
+    text-align      : center;
+    font-family     : 'Courier New', monospace;
 }
 
 .radio-container {
-    display: inline-block;
+    display : inline-block;
+    overflow: hidden;
+}
+
+.radio-container label {
+    padding: 4px 0px;
 }
 
 #control-container {
-    position: absolute;
-    bottom: 6vh;
-    width: 97%;
+    position   : absolute;
+    bottom     : 6vh;
+    width      : 97%;
     margin-left: 0.5%;
 }
 
 #display {
-    font-size: 25vh;
-    height: 36vh;
+    display: inline-block;
+    font-size  : 25vh;
+    height     : 36vh;
     line-height: 36vh;
-    margin-top: 13vh;
-    overflow: hidden;
+    margin-top: 12vh;
+    overflow   : hidden;
+    
+}
+
+.no-transition
+{
+    transition: opacity 0ms ease;
+    opacity: 0;
+}
+
+.transition
+{
+    transition: opacity 1000ms ease;
+    opacity: 1;
 }
 
 #btnNext {
-    margin-top: 24px;
-    padding: 20px 30px;
-    border-radius: 28px;
+    margin-top      : 24px;
+    padding         : 20px 30px;
+    border-radius   : 28px;
     background-color: #333;
-    color: #aaa;
-    border: none 0px;
+    color           : #aaa;
+    border          : none 0px;
 }
 
 #btnNext:hover {
-    color: #0075FF;
+    color           : #0075FF;
     background-color: #111;
 }
 
-select
-{
+select {
     background-color: #333;
-    color: #aaa;
-    padding: 7px 3px;
-    border-radius: 2px;
+    color           : #aaa;
+    padding         : 7px 3px;
+    border-radius   : 2px;
 }
 
-.glow {
-    font-size: 80px;
-    color: #fff;
-    text-align: center;
-    -webkit-animation: glow 1s ease-in-out infinite alternate;
-    -moz-animation: glow 1s ease-in-out infinite alternate;
-    animation: glow 1s ease-in-out infinite alternate;
-  }
-  
-  @-webkit-keyframes glow {
-    from {
-      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #004a9e, 0 0 40px #004a9e, 0 0 50px #004a9e, 0 0 60px #004a9e, 0 0 70px #004a9e;
-    }
-    to {
-      text-shadow: 0 0 20px #fff, 0 0 30px #325fa1, 0 0 40px #325fa1, 0 0 50px #325fa1, 0 0 60px #325fa1, 0 0 70px #325fa1, 0 0 80px #325fa1;
-    }
-  }
+.random-icon img {
+    height : 16px;
+    filter : grayscale(100%);
+    display: none;
+}
 
+.link {
+    text-decoration: underline;
+    color          : #333;
+    font-size      : 0.8em;
+}
+
+.radio-container input,
+.radio-container label,
+.random-icon img {
+    vertical-align: middle;
+}
+
+.radio-container {
+    width: 125px;
+}
+
+
+.glow {
+    font-size        : 80px;
+    color            : #fff;
+    text-align       : center;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation   : glow 1s ease-in-out infinite alternate;
+    animation        : glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #004a9e, 0 0 40px #004a9e, 0 0 50px #004a9e, 0 0 60px #004a9e, 0 0 70px #004a9e;
+    }
+
+    to {
+        text-shadow: 0 0 20px #fff, 0 0 30px #325fa1, 0 0 40px #325fa1, 0 0 50px #325fa1, 0 0 60px #325fa1, 0 0 70px #325fa1, 0 0 80px #325fa1;
+    }
+}
+
+
+@media only screen and (max-width: 479px) {
+
+    #radio-container,
+    .radio-container {
+        display: block;
+        width  : 180px;
+    }
+
+    #radio-container {
+        margin      : auto;
+    }
+
+    .radio-container {
+        text-align: left;
+    }
+
+    .radio-container label {
+        width  : 80px;
+        display: inline-block;
+    }
+
+    .random-icon {
+        position   : relative;
+        left       : 120px;
+        top        : 20px;
+        margin-left: 5px;
+    }
+}

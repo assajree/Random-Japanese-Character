@@ -17,16 +17,26 @@
 
             <div id="radio-container">
                 <div class="radio-container">
-                    <input type="radio" id="hiragana" name="dipplay_type" value="hiragana" onclick="changeType(1)" checked>
+                    <div class="random-icon">
+                        <span class="link" onclick="random(1)">random</span>
+                    </div>
+                    <input type="radio" id="hiragana" name="dipplay_type" value="hiragana" onclick="changeType(1)"
+                        checked>
                     <label for="hiragana">Hiragana</label>
                 </div>
 
                 <div class="radio-container">
+                    <div class="random-icon">
+                        <span class="link" onclick="random(2)">random</span>
+                    </div>
                     <input type="radio" id="katagana" name="dipplay_type" value="katagana" onclick="changeType(2)">
                     <label for="katagana">Katagana</label>
                 </div>
 
                 <div class="radio-container">
+                    <div class="random-icon">
+                        <span class="link" onclick="random(2)">random</span>
+                    </div>
                     <input type="radio" id="eng" name="dipplay_type" value="x" onclick="changeType(0)">
                     <label for="eng">English</label>
                 </div>
@@ -64,7 +74,7 @@
             </select>
         </div>
 
-        <div id="display" class="glow" onclick="random()">あ</div>
+        <div id="display" class="glow_ no-transition" onclick="random()">あ</div>
 
 
     </div>

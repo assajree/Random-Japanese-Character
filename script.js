@@ -105,7 +105,7 @@ var items = [];
 
 var typeIndex = 1;
 var charIndex = 0;
-var oldChar = "あ";
+var oldChar = "";
 
 // document ready
 document.addEventListener("DOMContentLoaded", function (event) {
@@ -117,18 +117,19 @@ document.addEventListener("DOMContentLoaded", function (event) {
         level = -1;
 
     items = buildItems(level);
+    random();
 
 });
 
 function changeType(index) {
 
-    if (typeIndex == index) {
-        // random if repeatedly click on same type radio
-        random(index);
-    } else {
-        typeIndex = index;
-        refreshText();
-    }
+    // if (typeIndex == index) {
+    //     // random if repeatedly click on same type radio
+    //     random(index);
+    // } else {
+    typeIndex = index;
+    refreshText();
+    // }
 }
 
 function setType(index) {
@@ -151,62 +152,28 @@ function setType(index) {
 function refreshText() {
     var item = items[charIndex][typeIndex];
     display.innerHTML = item;
+
+    setTimeout(function () {
+        display.className = "transition";
+    }, 100);
 }
 
 function random(type) {
+    display.className = "no-transition";
 
     if (type != undefined)
         setType(type);
 
-    var level = Number(cboLevel.value);
-    var randomLength = getRandomLength(level);
-
     var newCharIndex = Math.floor(Math.random() * items.length);
     var newChar = items[newCharIndex][1];
+    // console.log("random", oldChar, newChar);
     if (oldChar == newChar) {
-        random()
+        random();
     } else {
         charIndex = newCharIndex;
         oldChar = newChar;
         refreshText();
 
-    }
-}
-
-function getRandomLength(level) {
-    switch (level) {
-        case 1:
-            return 5;
-            break;
-        case 2:
-            return 10;
-            break;
-        case 3:
-            return 15;
-            break;
-        case 4:
-            return 20;
-            break;
-        case 5:
-            return 25;
-            break;
-        case 6:
-            return 30;
-            break;
-        case 7:
-            return 35;
-            break;
-        case 8:
-            return 38;
-            break;
-        case 9:
-            return 43;
-            break;
-        case 10:
-            return 46;
-            break;
-        default:
-            return items.length
     }
 }
 
