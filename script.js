@@ -152,7 +152,6 @@ function refreshText() {
 }
 
 function random(type) {
-    console.log("random");
 
     if (type != undefined)
         setType(type);
