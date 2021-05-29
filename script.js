@@ -90,6 +90,14 @@ var items = [
 var typeIndex = 1;
 var charIndex = 0;
 
+// document ready
+document.addEventListener("DOMContentLoaded", function(event) {
+	
+	var level = getCookie("level");	
+	if(level)
+		cboLevel.value = level;
+});
+
 function changeType(index) {
 	
 	if(typeIndex == index)
@@ -108,15 +116,12 @@ function setType(index) {
     typeIndex = index;
 	switch(index) {
 		case 0:
-			console.log(eng);
 			eng.checked = true;
 			break;
 		case 1:
-			console.log(hiragana);
 			hiragana.checked = true;
 			break;
 		case 2:
-			console.log(katagana);
 			katagana.checked = true;
 			break;
 		//default:
@@ -127,7 +132,6 @@ function setType(index) {
 function refreshText()
 {
     var item = items[charIndex][typeIndex];
-    console.log(item);
     display.innerHTML=item;
 }
 
@@ -137,7 +141,6 @@ function random(type) {
 		
 	var level = Number(cboLevel.value);
 	var randomLength = getRandomLength(level);
-	console.log(randomLength);
 		
     var newCharIndex= Math.floor(Math.random() * randomLength);
     if(newCharIndex == charIndex)
@@ -154,7 +157,6 @@ function random(type) {
 
 function getRandomLength(level)
 {
-	console.log(level);
 	switch(level)
 	{	
 		case 1:
@@ -190,4 +192,26 @@ function getRandomLength(level)
 		default :			
 			return items.length
 	}
+}
+
+function setLevel()
+{
+	var level = cboLevel.options[cboLevel.selectedIndex].value;
+	document.cookie = "level=" + level + ";" + "SameSite=None; Secure";
+}
+
+function getCookie(cname) {
+  var name = cname + "=";
+  var decodedCookie = decodeURIComponent(document.cookie);
+  var ca = decodedCookie.split(';');
+  for(var i = 0; i <ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
 }
