@@ -53,8 +53,8 @@ body {
 }
 
 #btnNext:hover {
-    background-color: #0075FF;
-    color: #ccc;
+    color: #0075FF;
+    background-color: #111;
 }
 
 select
