@@ -8,12 +8,28 @@ body
     display: inline-block;
 }
 
-.button-container
+.button-container,
+#btnNext
 {
-    margin-top: 30px;
+    margin-top: 10px;
 }
 
 #display
 {
     font-size: 25vh;
+}
+
+.next-button
+{
+	width: 100px;
+}
+
+#btnNext
+{
+	padding: 5px 10px;	
+}
+
+#sub-button
+{
+	display: none;
 }

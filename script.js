@@ -90,9 +90,38 @@ var items = [
 var typeIndex = 1;
 var charIndex = 0;
 
+function changeType(index) {
+	
+	if(typeIndex == index)
+	{
+		// random if repeatedly click on same type radio
+		random(index);
+	}
+	else
+	{
+		typeIndex = index;
+		refreshText();
+	}
+}
+
 function setType(index) {
     typeIndex = index;
-    refreshText();
+	switch(index) {
+		case 0:
+			console.log(eng);
+			eng.checked = true;
+			break;
+		case 1:
+			console.log(hiragana);
+			hiragana.checked = true;
+			break;
+		case 2:
+			console.log(katagana);
+			katagana.checked = true;
+			break;
+		//default:
+		// code block
+	}
 }
 
 function refreshText()
@@ -102,7 +131,11 @@ function refreshText()
     display.innerHTML=item;
 }
 
-function random() {
+function random(type) {
+	console.log("type", type);
+	if(type != undefined )
+		setType(type);
+	
     // console.log(display.innerHTML);
 
     // console.log("random");
