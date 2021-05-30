@@ -41,7 +41,6 @@ body {
     color           : #eee;
     border          : none 0px;
     padding         : 10px 20px;
-    margin-left     : -4px
 }
 
 #btnNext:hover {
@@ -120,19 +119,21 @@ select {
     }
 
     #display {
-        font-size  : 36vh;
-        height     : 36vh;
+        font-size  : 30vh;
+        height     : 30vh;
         line-height: 36vh;
         padding-top: 15vh;
+        padding-bottom: 5vh;
         width      : 100%;
         margin     : auto;
     }
 }
 
-@media only screen and (min-height: 640px) {   
+@media only screen and (min-height: 640px) and (min-width: 480px) {   
 
     #display {
         padding-top: 25vh;
+        padding-bottom: 10vh;
     }
 
 }
