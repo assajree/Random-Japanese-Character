@@ -106,6 +106,7 @@ var items = [];
 var typeIndex = 1;
 var charIndex = 0;
 var oldChar = "";
+var originalDisplayClass;
 
 // document ready
 document.addEventListener("DOMContentLoaded", function (event) {
@@ -117,9 +118,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
         level = -1;
 
     items = buildItems(level);
+    originalDisplayClass = display.className;
     random();
 
-});
+});display
 
 function changeType(index) {
 
@@ -154,12 +156,17 @@ function refreshText() {
     display.innerHTML = item;
 
     setTimeout(function () {
-        display.className = "transition";
+        setDisplayClass("transition");
     }, 100);
 }
 
+function setDisplayClass(className)
+{
+    display.className = originalDisplayClass + " " + className;
+}
+
 function random(type) {
-    display.className = "no-transition";
+    setDisplayClass("no-transition");
 
     if (type != undefined)
         setType(type);
