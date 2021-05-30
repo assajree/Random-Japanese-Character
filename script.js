@@ -121,7 +121,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     originalDisplayClass = display.className;
     random();
 
-});display
+});
 
 function changeType(index) {
 

@@ -13,6 +13,34 @@
 <body>
 
     <div id="main-container">
+
+        <div id="level-container">
+            <select id="cboLevel" onchange="setLevel()">
+                <option value="0.01">Level 0 only a</option>
+                <option value="0.02">Level 0 only ka/ga</option>
+                <option value="0.03">Level 0 only sa/za</option>
+                <option value="0.04">Level 0 only ta/da</option>
+                <option value="0.05">Level 0 only na)</option>
+                <option value="0.06">Level 0 only ha/ba/pa</option>
+                <option value="0.07">Level 0 only ma</option>
+                <option value="0.08">Level 0 only ya</option>
+                <option value="0.09">Level 0 only ra</option>
+                <option value="0.10">Level 0 only wa</option>
+
+                <option value="1">Level 1 a to ka</option>
+                <option value="2">Level 2 a to sa/za</option>
+                <option value="3">Level 3 a to ta/da</option>
+                <option value="4">Level 4 a to na</option>
+                <option value="5">Level 5 a to ha/ba/pa</option>
+                <option value="6">Level 6 a to ma</option>
+                <option value="7">Level 7 a to ya</option>
+                <option value="8">Level 8 a to ra</option>
+                <option value="-1" selected="selected">Level Max</option>
+            </select>
+        </div>
+
+        <div id="display" class="glow" onclick="random()">あ</div>
+
         <div id="control-container">
 
             <div id="radio-container">
@@ -48,35 +76,7 @@
             </div>
 
         </div>
-
-        <div id="level-container">
-            <select id="cboLevel" onchange="setLevel()">
-                <option value="0.01">Level 0 only a</option>
-                <option value="0.02">Level 0 only ka/ga</option>
-                <option value="0.03">Level 0 only sa/za</option>
-                <option value="0.04">Level 0 only ta/da</option>
-                <option value="0.05">Level 0 only na)</option>
-                <option value="0.06">Level 0 only ha/ba/pa</option>
-                <option value="0.07">Level 0 only ma</option>
-                <option value="0.08">Level 0 only ya</option>
-                <option value="0.09">Level 0 only ra</option>
-                <option value="0.10">Level 0 only wa</option>
-
-                <option value="1">Level 1 a to ka</option>
-                <option value="2">Level 2 a to sa/za</option>
-                <option value="3">Level 3 a to ta/da</option>
-                <option value="4">Level 4 a to na</option>
-                <option value="5">Level 5 a to ha/ba/pa</option>
-                <option value="6">Level 6 a to ma</option>
-                <option value="7">Level 7 a to ya</option>
-                <option value="8">Level 8 a to ra</option>
-                <option value="-1" selected="selected">Level Max</option>
-            </select>
-        </div>
-
-        <div id="display" class="glow" onclick="random()">あ</div>
-
-
+        
     </div>
 </body>
 
