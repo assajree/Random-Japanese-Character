@@ -104,6 +104,7 @@ select {
     }
 }
 
+/* small screen */
 @media only screen and (min-height: 330px) {
     #control-container {
         position   : absolute;
@@ -118,8 +119,7 @@ select {
         width     : 165px;
     }
 
-    #display {
-        font-size  : 30vh;
+    #display {        
         height     : 30vh;
         line-height: 36vh;
         padding-top: 15vh;
@@ -129,17 +129,24 @@ select {
     }
 }
 
+/* desktop */
 @media only screen and (min-height: 640px) and (min-width: 480px) {   
 
     #display {
+        font-size: 30vh;
         padding-top: 25vh;
         padding-bottom: 10vh;
     }
 
 }
 
+/* mobile */
 @media only screen and (max-width: 479px) {
-
+    #display
+    {
+        font-size  : 53vw;
+    }
+    
     #radio-container,
     .radio-container {
         display: block;
