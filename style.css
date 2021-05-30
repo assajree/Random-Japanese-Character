@@ -5,6 +5,10 @@ body {
     font-family     : 'Courier New', monospace;
 }
 
+#control-container {
+    margin-top: 10px;
+}
+
 .radio-container {
     display : inline-block;
     overflow: hidden;
@@ -15,8 +19,8 @@ body {
 }
 
 #display {
-    overflow   : hidden;
-    color      : #eee;
+    overflow : hidden;
+    color    : #eee;
     font-size: 69pt;
 }
 
@@ -31,7 +35,7 @@ body {
 }
 
 #btnNext {
-    margin-top      : 24px;    
+    margin-top      : 10px;
     border-radius   : 28px;
     background-color: #049;
     color           : #eee;
@@ -40,8 +44,7 @@ body {
     margin-left     : -4px
 }
 
-#btnNext:hover
-{
+#btnNext:hover {
     background-color: #036;
     color           : #aaa;
 }
@@ -102,8 +105,7 @@ select {
     }
 }
 
-@media only screen and (min-height: 440px)
-{
+@media only screen and (min-height: 330px) {
     #control-container {
         position   : absolute;
         bottom     : 6vh;
@@ -112,16 +114,27 @@ select {
     }
 
     #btnNext {
-        padding         : 20px 30px;
-        width           : 165px;
+        margin-top: 24px;
+        padding   : 20px 30px;
+        width     : 165px;
     }
 
     #display {
-        font-size  : 25vh;
+        font-size  : 36vh;
         height     : 36vh;
         line-height: 36vh;
-        margin-top : 12vh;    
+        padding-top: 15vh;
+        width      : 100%;
+        margin     : auto;
     }
+}
+
+@media only screen and (min-height: 640px) {   
+
+    #display {
+        padding-top: 25vh;
+    }
+
 }
 
 @media only screen and (max-width: 479px) {
@@ -133,7 +146,7 @@ select {
     }
 
     #radio-container {
-        margin: auto;
+        margin      : auto;
         padding-left: 10px;
     }
 
