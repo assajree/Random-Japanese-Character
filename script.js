@@ -242,6 +242,7 @@ function buildItems(level) {
             result = result.concat(items_sa);
         case 1:
             result = result.concat(items_ka);
+            result = result.concat(items_a);
             break;
     }
 
