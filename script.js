@@ -213,7 +213,7 @@ function buildItems(level) {
             result = result.concat(items_ha);
             break;
         case 0.07:
-            result = result.concat(items_na);
+            result = result.concat(items_ma);
             break;
         case 0.08:
             result = result.concat(items_ya);
