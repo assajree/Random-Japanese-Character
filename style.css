@@ -14,7 +14,7 @@ body {
     overflow: hidden;
 }
 
-.radio-container label {
+.label {
     padding: 4px 0px;
 }
 
@@ -106,6 +106,12 @@ select {
 
 /* small screen */
 @media only screen and (min-height: 330px) {
+   
+    .hidden-d
+    {
+        display: none;
+    }
+
     #control-container {
         position   : absolute;
         bottom     : 6vh;
@@ -132,6 +138,11 @@ select {
 /* desktop */
 @media only screen and (min-height: 640px) and (min-width: 480px) {   
 
+    .hidden-d
+    {
+        display: none;
+    }
+
     #display {
         font-size: 30vh;
         padding-top: 25vh;
@@ -142,29 +153,26 @@ select {
 
 /* mobile */
 @media only screen and (max-width: 479px) {
+    .hidden-m
+    {
+        display: none;
+    }
+
+    .hidden-d
+    {
+        display: inline-block;
+    }
+
     #display
     {
         font-size  : 53vw;
     }
 
-    #radio-container,
     .radio-container {
         display: block;
-        width  : 180px;
-    }
-
-    #radio-container {
-        margin      : auto;
-        padding-left: 10px;
-    }
-
-    .radio-container {
-        text-align: left;
-    }
-
-    .radio-container label {
-        width  : 80px;
-        display: inline-block;
+        width: 100%;
+        margin-top: 14px;
+        text-align: center;
     }
 
     .random-icon {
@@ -172,5 +180,23 @@ select {
         left       : 120px;
         top        : 20px;
         margin-left: 0px;
+    }
+
+    .label
+    {
+        display: inline-block;
+        background: #333;
+        width: 60vw;
+        text-align: center;
+        padding: 10px 0px;
+        border-radius: 20px;
+        min-width: 100px;
+    }
+
+    .small-button {
+        padding: 12px 18px;
+        border-radius: 18px;
+        font-size: 0.7em;
+        font-family: Arial;
     }
 }

@@ -39,34 +39,37 @@
             </select>
         </div>
 
-        <div id="display" class="glow" onclick="random()">あ</div>
+        <div id="display" onclick="random()">あ</div>
 
         <div id="control-container">
 
             <div id="radio-container">
                 <div class="radio-container">
-                    <div class="random-icon">
+                    <div class="random-icon hidden-m">
                         <span class="small-button" onclick="random(1)">Next</span>
                     </div>
                     <input type="radio" id="hiragana" name="dipplay_type" value="hiragana" onclick="changeType(1)"
                         checked>
-                    <label for="hiragana">Hiragana</label>
+                    <label class="label" for="hiragana">Hiragana</label>
+                    <span class="small-button hidden-d" onclick="random(1)">Next</span>
                 </div>
 
                 <div class="radio-container">
-                    <div class="random-icon">
+                    <div class="random-icon hidden-m">
                         <span class="small-button" onclick="random(2)">Next</span>
                     </div>
                     <input type="radio" id="katagana" name="dipplay_type" value="katagana" onclick="changeType(2)">
-                    <label for="katagana">Katagana</label>
+                    <label class="label" for="katagana">Katagana</label>
+                    <span class="small-button hidden-d" onclick="random(2)">Next</span>
                 </div>
 
                 <div class="radio-container">
-                    <div class="random-icon">
+                    <div class="random-icon hidden-m">
                         <span class="small-button" onclick="random(0)">Next</span>
                     </div>
                     <input type="radio" id="eng" name="dipplay_type" value="x" onclick="changeType(0)">
-                    <label for="eng">English</label>
+                    <label class="label" for="eng">English</label>
+                    <span class="small-button hidden-d" onclick="random(2)">Next</span>
                 </div>
 
             </div>
