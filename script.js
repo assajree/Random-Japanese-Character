@@ -17,7 +17,7 @@ var items_ka = [
     ["gi", "ぎ", "ギ"],
     ["gu", "ぐ", "グ"],
     ["ge", "げ", "ゲ"],
-    ["go", "ご", "ゲ"],
+    ["go", "ご", "ゴ"],
 ];
 
 var items_sa = [
@@ -58,7 +58,7 @@ var items_na = [
 var items_ha = [
     ["ha", "は", "ハ"],
     ["hi", "ひ", "ヒ"],
-    ["fu\n(hu)", "ふ", "フ"],
+    ["fu", "ふ", "フ"],
     ["he", "へ", "ヘ"],
     ["ho", "ほ", "ホ"],
 
@@ -216,20 +216,17 @@ function buildItems(level) {
             result = result.concat(items_ma);
             break;
         case 0.08:
-            result = result.concat(items_ya);
-            break;
-        case 0.09:
             result = result.concat(items_ra);
             break;
-        case 0.10:
+        case 0.09:
+            result = result.concat(items_ya);
             result = result.concat(items_wa);
             break;
         case -1:
-            result = result.concat(items_wa);
-        case 8:
-            result = result.concat(items_ra);
-        case 7:
             result = result.concat(items_ya);
+            result = result.concat(items_wa);
+        case 7:
+            result = result.concat(items_ra);
         case 6:
             result = result.concat(items_ma);
         case 5:
